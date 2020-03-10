@@ -26,14 +26,13 @@ $(document).ready(function() {
         }).then(function(res) { 
           for(i = 0; i < numArticles; i++) {
               var count = i + 1;
-              var title = res.response.docs[1].abstract;
-              var content = res.response.docs[1].lead_paragraph;
-              var link = res.response.docs[1].web_url; 
+              var title = res.response.docs[i].abstract;
+              var content = res.response.docs[i].lead_paragraph;
+              var link = res.response.docs[i].web_url; 
               var block = 
               `<div class="card mb-3">
                 <div class="card-header">
-                  <span class="bg-navy text-light rounded py-2 px-3 mr-2 mx-1">${count}</span>
-                  <h5 class="card-title">${title}</h5>
+                  <h5 class="card-title"><span class="bg-navy text-light rounded py-2 px-3 mr-2 mx-1">${count}</span><span class="m-1">${title}</span></h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">${content}</p>
