@@ -30,9 +30,10 @@ $(document).ready(function() {
               var content = res.response.docs[1].lead_paragraph;
               var link = res.response.docs[1].web_url; 
               var block = 
-              `<div class="card">
+              `<div class="card mb-3">
                 <div class="card-header">
-                  <h5 class="card-title"><span class="bg-navy text-light rounded py-2 px-3 mr-2">${count}</span>${title}</h5>
+                  <span class="bg-navy text-light rounded py-2 px-3 mr-2 mx-1">${count}</span>
+                  <h5 class="card-title">${title}</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text">${content}</p>
